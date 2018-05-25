@@ -1,0 +1,31 @@
+<!--pages/list/list.wxml-->
+
+<!--import 标签用来引入外部资源-->
+<import src="../template/list-template.wxml"/>
+<view class="listContainer">
+    <!--轮播图的标签 swiper 每个轮播图的标签时swiper-item 下面放image标签-->
+    <swiper indicator-dots="true" indicator-color="white"
+            indicator-active-color="red" autoplay="true" bindtap="toContent">
+        <swiper-item>
+            <image src="/images/detail/carousel/01.jpg" data-index="{{0}}"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/detail/carousel/02.jpg" data-index="{{1}}"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/detail/carousel/03.jpg" data-index="{{2}}"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/detail/carousel/04.jpg" data-index="{{3}}"></image>
+        </swiper-item>
+    </swiper>
+    <!--循环 默认有item 和 index-->
+    <block wx:for="{{listArr}}" wx:key="{{index}}">
+        <view catchtap="todetail" data-index="{{index}}">
+            <template is="listTemplate" data="{{...item}}"></template>
+        </view>
+    </block>
+
+
+
+</view>

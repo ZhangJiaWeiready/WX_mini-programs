@@ -1,0 +1,9 @@
+<!--pages/index/index.wxml-->
+<!-- bind 是冒泡 catch是非冒泡事件  -->
+<view class='indexContainer'>
+  <image src='{{userInfo.avatarUrl}}'></image>
+  <text class='username'>hello{{userInfo.nickName}}</text>
+  <view class='toWelcome' bindtap='getInfo'>
+    <text>开启小程序之旅</text>
+  </view>
+</view>
