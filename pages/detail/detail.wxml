@@ -18,6 +18,6 @@
         </view>
         <view class="line"></view>
     </view>
-    <button>转发此文章</button>
+    <button open-type="share">转发此文章</button>
     <text class="content">{{detailList.detail_content}}</text>
 </view>

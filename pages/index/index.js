@@ -12,7 +12,7 @@ Page({
     console.log('已点击')
     //  redirect 删除当前的记录跳转
     //  navgitar 不会删除当前的记录可以返回
-    wx.redirectTo({
+    wx.switchTab({
       url: "/pages/list/list",
       success() {
         console.log('跳转成功')
